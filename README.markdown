@@ -30,7 +30,6 @@ Download from github.
 - httplib2
 
 <code>
-
     >>> pip install httplib2
 <code>
 
@@ -43,7 +42,6 @@ Download from github.
 Enter your consumer key and consumer secret into the appropriate fields in the authorization csv file:
 
 <code>
-
     ./ysports/cache/tokensecrets.csv
 </code>
 
@@ -53,7 +51,6 @@ Enter your consumer key and consumer secret into the appropriate fields in the a
 ### Sample Usage
 #### The YLeague Object
 <code>
-    
     >>> import ysports
     >>> Y = ysports.YAuth()
     Enter Yahoo Authorization code: xxxxxx
@@ -64,7 +61,6 @@ Enter your consumer key and consumer secret into the appropriate fields in the a
 
 #### Arbitrary REST Query
 <code>
-
     >>> q1 = 'http://fantasysports.yahooapis.com/fantasy/v2/player/223.p.5479'
     >>> response, content = Y.request(q1)
     >>> print content
@@ -73,7 +69,6 @@ Enter your consumer key and consumer secret into the appropriate fields in the a
     
 #### Arbitrary YQL Query
 <code>
-
     >>> q2 = 'select * from fantasysports.leagues.scoreboard where league_key="<your_league_key>"'
     >>> response, content = Y.request_yql(q2)
     >>> print content
