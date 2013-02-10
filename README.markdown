@@ -29,9 +29,9 @@ Download from github.
 ### Dependencies
 - httplib2
 
-<code>
+`
     >>> pip install httplib2
-<code>
+`
 
 - [zbowling's fork of python oauth2](https://github.com/zbowling/python-oauth2) (See [discussion on StackOverflow](http://stackoverflow.com/questions/4026759/problems-with-python-oauth2-and-yahoos-fantasy-sports-api/4468269#4468269) for why this fork.)
 
@@ -41,37 +41,35 @@ Download from github.
 ### Setup
 Enter your consumer key and consumer secret into the appropriate fields in the authorization csv file:
 
-<code>
     ./ysports/cache/tokensecrets.csv
-</code>
 
 **Note: determine your own method for securely storing your authorization tokens. The method used in this library is not secure.**
 
 
 ### Sample Usage
 #### The YLeague Object
-<code>
+
+Create an Auth object, then create a League object:
+
     >>> import ysports
     >>> Y = ysports.YAuth()
     Enter Yahoo Authorization code: xxxxxx
     >>> L = ysports.YLeague(Y, "<your_league_key>")
     >>> L.name
     Your League Name
-</code>
+
 
 #### Arbitrary REST Query
-<code>
+
     >>> q1 = 'http://fantasysports.yahooapis.com/fantasy/v2/player/223.p.5479'
     >>> response, content = Y.request(q1)
     >>> print content
     [... fantasy info for Drew Brees, JSON format ...]
-</code>
+
     
 #### Arbitrary YQL Query
-<code>
     >>> q2 = 'select * from fantasysports.leagues.scoreboard where league_key="<your_league_key>"'
     >>> response, content = Y.request_yql(q2)
     >>> print content
     [... your league's info, JSON format ...]
-</code>
 
