@@ -6,6 +6,7 @@ import logging
 
 
 ## Defaults
+DFT_LEAGUE_KEY = 'nfl.l.000000'
 DFT_AUTH_FILE = 'ysports/cache/tokensecrets.csv'
 LOG_FILENAME = 'ysports/cache/ysports.log'
 INTERACTIVE_AUTHORIZATION = True
@@ -22,4 +23,3 @@ logging.basicConfig(filename=LOG_FILENAME,
 REQUEST_TOKEN_URL = 'https://api.login.yahoo.com/oauth/v2/get_request_token'
 AUTH_TOKEN_URL = 'https://api.login.yahoo.com/oauth/v2/get_token'
 YQL_ENDPOINT = 'http://query.yahooapis.com/v1/yql'
-DFT_LEAGUE_KEY = 'nfl.l.000000'
